@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Inicio de Sesíon - Sfera</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/estilos.css">
 </head>
-<body>	
-	<header class="header">
-		<strong class="texto-encabezado">Compu Mundo Hiper Mega Red</strong>
-	</header><br>
+
+<body>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h2 class="text-center text-bold">Compu Mundo Hiper Mega Red</h2>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 				<div class="panel panel-default">
-					<div class="panel-heading">Iniciar Sesión</div>                    
-					<div class="panel-body">                     
+					<div class="panel-heading">Iniciar Sesión</div>
+					<div class="panel-body">
 						<form role="form" method="post">
 							<table class="table">
 								<tr>
@@ -42,7 +50,7 @@
 									<td></td>
 									<td><button type="button" class="btn btn-default " onclick="iniciarSesion();"><span class="glyphicon glyphicon-lock"></span> Entrar</button></td>
 								</tr>
-							</table>                                          
+							</table>
 						</form>
 					</div>
 				</div>
@@ -50,7 +58,7 @@
 		</div>
 	</div>
 
-	<div class="modal fade bs-example-modal-sm" id="myModalAviso"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	<div class="modal fade bs-example-modal-sm" id="myModalAviso" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header" id="modal-encabezado">
@@ -68,10 +76,11 @@
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<!-- Archivo Js donde Validaremos los Campos y haremos enlace con el Archivo PHP para Consultar a la BD -->
 	<script type="text/javascript" src="public/js/principal.js" charset="UTF-8"></script>
 </body>
+
 </html>
