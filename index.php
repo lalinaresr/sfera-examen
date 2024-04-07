@@ -12,68 +12,81 @@
 </head>
 
 <body>
-	<div class="jumbotron jumbotron-fluid">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<h2 class="text-center text-bold">Compu Mundo Hiper Mega Red</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-					<div class="panel-heading">Iniciar Sesión</div>
-					<div class="panel-body">
-						<form role="form" method="post">
-							<table class="table">
-								<tr>
-									<th colspan="2"><strong class="texto-relleno">Por Favor Ingrese Sus Datos</strong></th>
-								</tr>
-								<tr>
-									<td><label for="usuario">Usuario:</label></td>
-									<td>
-										<input type="text" id="usuario" name="usuario" class="form-control" placeholder="Teclee su Usuario.." autocomplete="off">
-									</td>
-								</tr>
-								<tr>
-									<td><label for="contrasena">Contraseña:</label></td>
-									<td>
-										<input type="password" id="contrasena" name="contrasena" class="form-control" placeholder="Teclee su Contraseña.." autocomplete="off">
-									</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td><button type="button" class="btn btn-default " onclick="iniciarSesion();"><span class="glyphicon glyphicon-lock"></span> Entrar</button></td>
-								</tr>
-							</table>
-						</form>
+	<?php
+	//Iniciamos Sesion
+	session_start();
+	//Validamos que NO Exista la Variable de Session User y que tenga un Valor Nulo.
+	if (!isset($_SESSION['user'])) {
+	?>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<h2 class="text-center text-bold">Compu Mundo Hiper Mega Red</h2>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="modal fade bs-example-modal-sm" id="myModalAviso" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header" id="modal-encabezado">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel"></h4>
-				</div>
-				<div class="modal-body" id="modal-cuerpo">
-					<p id="aviso"></p>
-				</div>
-				<div class="modal-footer" id="modal-pie">
-					<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cerrar</button>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">Iniciar Sesión</div>
+						<div class="panel-body">
+							<form role="form" method="post">
+								<table class="table">
+									<tr>
+										<th colspan="2"><strong class="texto-relleno">Por Favor Ingrese Sus Datos</strong></th>
+									</tr>
+									<tr>
+										<td><label for="usuario">Usuario:</label></td>
+										<td>
+											<input type="text" id="usuario" name="usuario" class="form-control" placeholder="Teclee su Usuario.." autocomplete="off">
+										</td>
+									</tr>
+									<tr>
+										<td><label for="contrasena">Contraseña:</label></td>
+										<td>
+											<input type="password" id="contrasena" name="contrasena" class="form-control" placeholder="Teclee su Contraseña.." autocomplete="off">
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><button type="button" class="btn btn-default " onclick="iniciarSesion();"><span class="glyphicon glyphicon-lock"></span> Entrar</button></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
+		<div class="modal fade bs-example-modal-sm" id="myModalAviso" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header" id="modal-encabezado">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"></h4>
+					</div>
+					<div class="modal-body" id="modal-cuerpo">
+						<p id="aviso"></p>
+					</div>
+					<div class="modal-footer" id="modal-pie">
+						<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<?php
+		//Si la Variable de SESSION Existe o trae un Valor NO Nulo lo Redireccionamos al Dashboard.
+	} else {
+		header("location: dashboard.php");
+	}
+	?>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
