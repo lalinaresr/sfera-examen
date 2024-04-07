@@ -12,5 +12,5 @@
 	define('DATABASE', 'sfera');
 
 	//Constante que tiene el Valor de la Ruta de Archivo de Conexion.
-	define('RUTADB', '../config/connection.php');
+	define('RUTADB', 'connection.php');
 ?>

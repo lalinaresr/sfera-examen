@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bienvenido - Sfera</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../Resources/css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="public/css/estilos.css">
 </head>
 <body>
 	<?php 
 		//Mandamos a llamar a nuestro archivo de Conexion a la Base de Datos.
-		require_once('../Config/connection.php');
+		require_once('server/connection.php');
 		//Iniciamos Sesion
 		session_start();
 		//Validamos que Exista la Variable de Session User y que no tenga un Valor Nulo.
@@ -71,6 +71,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<!-- Archivo Js donde Validaremos los Campos y haremos enlace con el Archivo PHP para Consultar a la BD -->
-	<script type="text/javascript" src="../Controllers/principal.js"></script>
+	<script type="text/javascript" src="public/js/principal.js"></script>
 </body>
 </html>

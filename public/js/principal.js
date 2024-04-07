@@ -27,13 +27,13 @@ function iniciarSesion(){
 		$.ajax({
 			data: 'usuario='+usuario+'&& contrasena='+contrasena+'&& action='+"formLogin",
 			type: 'post',
-			url : '../Models/procesa.php',
+			url : 'server/procesa.php',
 			//Cuando Proceso la Información en el Archivo procesa.php no regresa una respuesta la cual estara en la funcion success del Metodo Ajax.
 			success: function(respuesta){				
 				if(respuesta=='1'){
-                    location.href='../Views/dashboard.php';
+                    location.href='dashboard.php';
                 }else{                  
-                	setTimeout ("location.href='../Views/index.php'", 4000);
+                	setTimeout ("location.href='index.php'", 4000);
                     $("#myModalAviso").modal("show");
 					$("#modal-encabezado").html('Error al Iniciar Sesión');
 					$("#aviso").html('Este Usuario NO existe, Intentelo Nuevamente.');
@@ -50,7 +50,7 @@ function cerrarSesion(){
 		//Mandaremos los Campos de Usuario y Contrasena, y de Accion le decimos que es el formLogout para que la pase de parametro  a la funcion en php que se llama actions.
 		data: 'usuario='+"null"+'&& contrasena='+"null"+'&& action='+"formLogout",
 		type: 'post',
-		url:  '../Models/procesa.php',
+		url:  'server/procesa.php',
 		//Cuando Proceso la Información en el Archivo procesa.php no regresa una respuesta la cual estara en la funcion success del Metodo Ajax.
 		success: function(respuesta){
 			window.location=respuesta;				

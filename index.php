@@ -7,7 +7,7 @@
 	<title>Inicio de Sesíon - Sfera</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="../Resources/css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="public/css/estilos.css">
 </head>
 <body>	
 	<header class="header">
@@ -72,6 +72,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<!-- Archivo Js donde Validaremos los Campos y haremos enlace con el Archivo PHP para Consultar a la BD -->
-	<script type="text/javascript" src="../Controllers/principal.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="public/js/principal.js" charset="UTF-8"></script>
 </body>
 </html>

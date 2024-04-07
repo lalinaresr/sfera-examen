@@ -1,6 +1,6 @@
 <?php  
 	//Mandamos a llamar a nuestro archivo de configuracion de base de datos.
-	require_once('../Config/database.php');
+	require_once('database.php');
 
 	class Procesa{
 
@@ -75,7 +75,7 @@
 			//La Variabe de Sesion la Igualamos a NUlO.
 			$_SESSION['user'] = null;
 			//Al Acabar toda la Sesion nos Redireccionara al Index.
-			echo "../Views/index.php";
+			echo "../index.php";
 		}
 	}
 
