@@ -1,0 +1,55 @@
+body{
+	background-color: #ececec;
+}
+
+.header{
+	width:100%;                /* Establecemos que el Header Utilice el 100% del Documento */
+	background-color: #ffffcc; /* Color de Fondo del Header */
+	line-height: 700% ;        /* Establecemos que el Height Utilice el 700% del Documento */
+	text-align: center;        /* El Texto que Vaya dentro se Alineara al Centro */
+}
+
+.header > .texto-encabezado{
+	color: #000000;  /* Color de Letra del Texto en el Header */
+	font-size: 250%; /* Tamaño de la Letra del Texto del Header */
+}
+
+@media (max-width: 50%) { 
+	.header > .texto-encabezado{
+		color: #000000;  /* Color de Letra del Texto en el Header */
+		font-size: 200%; /* Tamaño de la Letra del Texto del Header */
+	}
+}
+
+.texto-relleno{
+	color: #000000;  /* Color de Letra del Texto en el Header */
+	font-size: 160%; /* Tamaño de la Letra del Texto del Header */
+}
+
+#modal-encabezado{
+	background-color: #ffffcc;
+	text-align: center;
+	border-radius: 0;
+	color: #000000;
+}
+
+#modal-cuerpo{
+	background-color: #ececec;
+	font-family:"Times New Roman", serif}
+}
+
+#modal-pie{
+	background-color: #ececec;
+	border-radius: 0;
+}
+
+.texto{
+	text-align: justify;
+	font-size: 97%;
+}
+
+.bienvenida{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 30px;
+}

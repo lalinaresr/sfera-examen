@@ -1,0 +1,16 @@
+﻿El examen fue realizado con el patrón de diseño M.V.C (Modelo, Vista, Controlador).
+
+Imágenes del funcionamiento              : Sfera/Screens
+Pagina de inicio                         : Sfera/Login/Views/index.php
+Archivo de configuración (Base de Datos) : Sfera/Login/Config/database.php 
+Archivo de conexión a la Base de Datos   : Sfera/Login/Config/connection.php
+Archivo de acceso al controller          : Sfera/Login/Controllers/principal.js 
+Archivo de consultas al servidor         : Sfera/Login/Models/procesa.php 
+Hoja de estilos personalizada            : Sfera/Login/Resources/css/estilos.css
+Archivo de Base de Datos                 : Sfera/sfera.sql
+
+Para el Diseño Web se utilizo el Framework Responsive Bootstrap.
+El Servidor Local fue WampServer (Windows - Apache - MySQL- PHP).
+Pd. Para visualizar el sitio en Wamp se pega la carpeta en la carpeta de www y en Xampp se pega en htdocs.
+
+Las tecnologías que se utilizaron fueron PHP 5, HTML5, CSS3, JavaScript, jQuery.
