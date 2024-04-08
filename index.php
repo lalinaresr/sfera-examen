@@ -6,8 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Inicio de Sesíon - Sfera</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">	
 	<link rel="stylesheet" type="text/css" href="public/css/estilos.css">
 </head>
 
@@ -89,9 +88,9 @@
 	?>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 	<!-- Archivo Js donde Validaremos los Campos y haremos enlace con el Archivo PHP para Consultar a la BD -->
 	<script type="text/javascript" src="public/js/principal.js" charset="UTF-8"></script>
 </body>
