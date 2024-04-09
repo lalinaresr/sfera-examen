@@ -1,6 +1,6 @@
 <div class="col-md-4 col-md-offset-4">
     <div class="panel panel-default">
-        <div class="panel-heading">Iniciar Sesión</div>
+        <div class="panel-heading">Identificarse</div>
         <div class="panel-body">
             <div class="row">
                 <form id="form-login" method="POST">

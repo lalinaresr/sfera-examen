@@ -1,4 +1,4 @@
-import { HOME, LOGIN, DASHBOARD, LOGOUT } from './constants.js';
+import { HOME, LOGIN, LOGOUT } from './constants.js';
 
 $("#form-login").submit(function (e) {
 	e.preventDefault();
@@ -20,7 +20,7 @@ $("#form-login").submit(function (e) {
 			$("#btn-login").html('<span class="glyphicon glyphicon-lock"></span> Entrar');
 
 			if (response.type == 'success') {
-				location.href = DASHBOARD;
+				location.href = HOME;
 			} else {
 				alert('El usuario y/o contraseña que ingreso no coinciden con alguno de nuestros registros');
 			}
