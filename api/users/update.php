@@ -1,9 +1,9 @@
 <?php
+require_once './Users.php';
 
-if (count($_GET) > 0) {
-    require_once './Users.php';
+if (isset($_SESSION['is_logged_in'])) {
     $users = new Users();
-    echo $users->find($_GET['value'], $_GET['field']);
+    echo $users->update($_POST);
 } else {
     echo '403 forbidden access to this resource on the server is denied';
 }
