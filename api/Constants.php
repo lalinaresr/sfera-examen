@@ -4,7 +4,7 @@ const CONNECTION = [
 	'HOSTNAME' => 'localhost',
 	'USERNAME' => 'root',
 	'PASSWORD' => '',
-	'DATABASE' => 'sfera',
+	'DATABASE' => 'sferamgmx',
 	'PORT' => null,
 	'SOCKET' => null
 ];

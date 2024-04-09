@@ -16,9 +16,9 @@ class Auth extends Model
 	
 	public function login($data)
 	{
-		$user = $this->db->real_escape_string($data['user']);
+		$email = $this->db->real_escape_string($data['email']);
 		$password = $this->db->real_escape_string($data['password']);
-		$response = $this->db->query(sprintf("SELECT * FROM usuario WHERE usuario = '%s' AND contrasena = '%s' LIMIT 1", $user, $password));
+		$response = $this->db->query(sprintf("SELECT * FROM users WHERE email = '%s' AND password = '%s' AND deleted_at IS NULL LIMIT 1", $email, $password));
 
 		if ($response->num_rows > 0) {
 			$user = $response->fetch_assoc();

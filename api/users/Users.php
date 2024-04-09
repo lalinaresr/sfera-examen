@@ -10,7 +10,7 @@ class Users extends Model {
 
     public function find($value = null, $field = 'id')
     {
-        $response = $this->db->query(sprintf("SELECT * FROM usuario WHERE %s = '%s' LIMIT 1", $field, $value));
+        $response = $this->db->query(sprintf("SELECT * FROM users WHERE %s = '%s' LIMIT 1", $field, $value));
         
         if ($response)
             return json_encode(['type' => 'success', 'data' => $response->fetch_assoc()]);

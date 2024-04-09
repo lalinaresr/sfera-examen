@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
             $("#data-username").text('...');
         },
         success: function (response) {
-            $("#data-username").text(response.data.nombre);
+            $("#data-username").text(`${response.data.firstname} ${response.data.lastname}`);
         }
     });
 });
