@@ -1,98 +1,68 @@
+<?php
+	session_start();
+
+	if (isset($_SESSION['is_logged_in'])) {
+		header('Location: dashboard.php');
+		exit;
+	}
+?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Inicio de Sesíon - Sfera</title>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">	
-	<link rel="stylesheet" type="text/css" href="public/css/estilos.css">
+	<title>Iniciar sesión</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="public/css/styles.css">
 </head>
 
 <body>
-	<?php
-	//Iniciamos Sesion
-	session_start();
-	//Validamos que NO Exista la Variable de Session User y que tenga un Valor Nulo.
-	if (!isset($_SESSION['user'])) {
-	?>
-		<div class="jumbotron jumbotron-fluid">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<h2 class="text-center text-bold">Compu Mundo Hiper Mega Red</h2>
-					</div>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h2 class="text-center text-bold">Compu Mundo Hiper Mega Red</h2>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4">
-					<div class="panel panel-default">
-						<div class="panel-heading">Iniciar Sesión</div>
-						<div class="panel-body">
-							<form role="form" method="post">
-								<table class="table">
-									<tr>
-										<th colspan="2"><strong class="texto-relleno">Por Favor Ingrese Sus Datos</strong></th>
-									</tr>
-									<tr>
-										<td><label for="usuario">Usuario:</label></td>
-										<td>
-											<input type="text" id="usuario" name="usuario" class="form-control" placeholder="Teclee su Usuario.." autocomplete="off">
-										</td>
-									</tr>
-									<tr>
-										<td><label for="contrasena">Contraseña:</label></td>
-										<td>
-											<input type="password" id="contrasena" name="contrasena" class="form-control" placeholder="Teclee su Contraseña.." autocomplete="off">
-										</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td><button type="button" class="btn btn-default " onclick="iniciarSesion();"><span class="glyphicon glyphicon-lock"></span> Entrar</button></td>
-									</tr>
-								</table>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">Iniciar Sesión</div>
+					<div class="panel-body">
+						<div class="row">
+							<form id="form-login" method="POST">
+								<div class="form-group">
+									<label for="user" class="col-md-3 mb-3">Usuario:</label>
+									<div class="col-md-9 mb-3">
+										<input type="text" id="user" name="user" class="form-control" placeholder="Ingrese el su nombre de usuario" required autocomplete="off" autofocus="true">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-md-3 mb-3">Contraseña:</label>
+									<div class="col-md-9 mb-3">
+										<input type="password" id="password" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
+									</div>
+								</div>
+								<div class="col-md-9 col-md-offset-3">
+									<button type="submit" id="btn-login" class="btn btn-default"><span class="glyphicon glyphicon-lock"></span> Entrar</button>
+								</div>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="modal fade bs-example-modal-sm" id="myModalAviso" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
-					<div class="modal-header" id="modal-encabezado">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel"></h4>
-					</div>
-					<div class="modal-body" id="modal-cuerpo">
-						<p id="aviso"></p>
-					</div>
-					<div class="modal-footer" id="modal-pie">
-						<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cerrar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	<?php
-		//Si la Variable de SESSION Existe o trae un Valor NO Nulo lo Redireccionamos al Dashboard.
-	} else {
-		header("location: dashboard.php");
-	}
-	?>
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-	<!-- Archivo Js donde Validaremos los Campos y haremos enlace con el Archivo PHP para Consultar a la BD -->
-	<script type="text/javascript" src="public/js/principal.js" charset="UTF-8"></script>
+	<script type="module" src="public/js/auth.js"></script>
 </body>
 
 </html>
