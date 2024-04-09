@@ -8,6 +8,12 @@ class Auth extends Model
 		parent::__construct();
 	}
 
+	private function _set_userdata_($logged = false, $value = null)
+	{
+		$_SESSION['is_logged_in'] = $logged;
+		$_SESSION['user'] = $value;
+	}
+	
 	public function login($data)
 	{
 		$user = $this->db->real_escape_string($data['user']);
@@ -29,11 +35,5 @@ class Auth extends Model
 		session_unset();
 		session_destroy();
 		return json_encode(['type' => 'success']);
-	}
-
-	private function _set_userdata_($logged = false, $value = null)
-	{
-		$_SESSION['is_logged_in'] = $logged;
-		$_SESSION['user'] = $value;
-	}
+	}	
 }
